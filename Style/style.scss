@@ -1,0 +1,145 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(236, 235, 235);
+    
+}
+
+//stylin
+
+.title {
+    // font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    font-size: 5rem;
+    color: rgb(177, 91, 91);
+    text-transform: capitalize;
+    position: relative;
+
+    &::after{
+        content: '💣';
+        font-size: 1.5rem;
+        bottom: -35px;
+        position: relative; 
+        display: block;
+        right: -10px;
+    }
+
+
+    &::before{
+        content: '💣';
+        font-size: 1.5rem;
+        bottom: -35px;
+        position: relative; 
+        display: block;
+        right: 10px;
+    }
+    // position: absolute;
+}
+
+.result {
+    color: rgb(13, 144, 35);
+    text-transform: capitalize;
+    font-family:  sans-serif;
+    font-size: 3rem;
+    padding: 1rem;
+    background-color:  rgb(236, 235, 235);
+    position: absolute;
+    left: 50%;
+    // width: 100%;
+    top: 50%;
+    transform: translate(-50%, -150%);
+    z-index: 3;
+    opacity: 0;
+    transition: all .5s ease-in;
+}
+
+
+.game-over {
+    color: rgb(177, 91, 91);
+    padding: 1rem;
+    background-color: rgb(236, 235, 235);
+    text-transform: capitalize;
+    border-radius: 25px;
+    font-family:  sans-serif;
+    font-size: 3rem;
+    position: absolute;
+    left: 50%;
+
+    top: 50%;
+    transform: translate(-50%, -150%);
+    z-index: 3;
+    opacity: 0;
+    transition: all .5s ease-in;
+}
+
+
+
+#grid {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(197, 197, 197);
+    border:  solid 2px black;
+    border-radius: 6px;  
+
+        div {   
+            height: 40px;
+            width: 40px;
+            border-radius: 4px;
+            border: solid 1px rgb(177, 91, 91);
+            box-sizing: border-box;
+            cursor: pointer;
+            transition: all .1s ease-in-out;
+
+                &:hover {
+                background-color: rgb(218, 216, 216);
+                box-shadow:  0px 0px 10px rgb(87, 86, 86);
+                border: solid 1px rgb(42, 42, 42);
+
+                }
+        }
+}
+
+.bomb {
+ 
+display: flex;
+justify-content: center;
+align-items: center;
+// background-color: rgb(221, 221, 221);
+
+           
+}
+
+.flag {
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(221, 221, 221);
+               
+    }
+
+.checked {
+    background-color:  rgb(105, 105, 105);
+    
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    display: block;
+    text-align: center;
+    line-height: -50%;
+    padding-top: 2.5%;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all .25s;
+    
+}
